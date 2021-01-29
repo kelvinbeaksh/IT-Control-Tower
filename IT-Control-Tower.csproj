@@ -204,6 +204,7 @@
     <Content Include="ITCT-Data-Model.edmx.diagram">
       <DependentUpon>ITCT-Data-Model.edmx</DependentUpon>
     </Content>
+    <Content Include="Scripts\data.json" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -237,6 +238,7 @@
     <Content Include="Views\Shared\navBar.cshtml" />
     <Content Include="Views\Shared\breadCrumb.cshtml" />
     <Content Include="Views\Home\multiPcDashboard.cshtml" />
+    <Content Include="Views\Shared\card.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

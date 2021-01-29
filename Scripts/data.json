@@ -1,0 +1,31 @@
+{
+  HSC:[
+      {"title": "HAM"},
+      {title: "SAM"},
+      {title: "Compliance"},
+      ],
+  HAM:[
+      {title: 'New Hire', href:''},
+      {title: 'PC Refresh', href:''},
+      {title: 'BMC', href:''},
+      {title: 'Multiple PC', href:''},
+      ],       
+  SAM:[
+      {title: 'SA Tracker', href:''},
+      {title: 'SA Gap', href:''},
+      {title: 'Adobe Cautionary', href:''},
+      {title: 'Other Cautionary', href:''},
+      {title: 'Multiple Office Addition', href:''},
+      ],         
+  Compliance:[
+      {title: 'SCCM', href:''},
+      {title: 'McAfee', href:''},
+      {title: 'Cylance', href:''},
+      {title: 'Active Directory Health', href:''},
+      {title: 'MS Patch', href:''},
+      {title: 'Disk Space', href:''},
+      ]
+
+ }
+      
+
