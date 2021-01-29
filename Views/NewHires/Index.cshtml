@@ -1,0 +1,81 @@
+﻿@model IEnumerable<IT_Control_Tower.NewHire>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SESA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StartDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Box)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Computer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Headset)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Printer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Statuses)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TechPartner.Email)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.SESA)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.StartDate)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Email)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Box)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Computer)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Headset)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Printer)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Statuses)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.TechPartner.Email)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.SESA }) |
+        @Html.ActionLink("Details", "Details", new { id = item.SESA }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.SESA })
+    </td>
+</tr>
+}
+
+</table>
