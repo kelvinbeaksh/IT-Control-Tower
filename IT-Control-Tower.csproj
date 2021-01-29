@@ -234,6 +234,7 @@
     <Content Include="Views\NewHires\Details.cshtml" />
     <Content Include="Views\NewHires\Edit.cshtml" />
     <Content Include="Views\NewHires\Index.cshtml" />
+    <Content Include="Views\Shared\_Card.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
