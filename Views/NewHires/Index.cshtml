@@ -15,10 +15,10 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.SESA)
+            @Html.ActionLink("SESA", "Index", new { sortOrder = ViewBag.SESASortParm })
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.StartDate)
+            @Html.ActionLink("Start Date", "Index", new { sortOrder = ViewBag.SDateSortParm })
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Email)

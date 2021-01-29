@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using IT_Control_Tower;
+using PagedList;
 
 namespace IT_Control_Tower.Controllers
 {
@@ -15,17 +16,33 @@ namespace IT_Control_Tower.Controllers
         private ITControlTowerEntities db = new ITControlTowerEntities();
 
         // GET: NewHires
-        public ActionResult Index(String searchText)
+        public ActionResult Index(string sortOrder)
         {
-            if (searchText == null|| searchText == "" )
+            ViewBag.SESASortParm = String.IsNullOrEmpty(sortOrder) ? "SESA" : "";
+            ViewBag.SDateSortParm = sortOrder == "date" ? "date_desc" : "date";
+            var newHires = db.NewHires.Include(n => n.TechPartner);
+            switch (sortOrder)
             {
-                var newHires = db.NewHires.Include(n => n.TechPartner);
-                return View(newHires.ToList());
+                case "SESA":
+                    newHires = newHires.OrderByDescending(s => s.SESA);
+                    break;
+                case "date_desc":
+                    newHires = newHires.OrderByDescending(s => s.StartDate);
+                    break;
+                case "date":
+                    newHires = newHires.OrderBy(s => s.StartDate);
+                    break;
+                default:
+
+                    break;
+
             }
-            else {
-                var newHires = db.NewHires.Where(n => n.SESA.Equals(searchText));
-                return View(newHires.ToList());
-            }
+                    return View(newHires.ToList());
+            
+            
+                //var newHires = db.NewHires.Where(n => n.SESA.Equals(searchText));
+               
+            
         }
 
         // GET: NewHires/Details/5
