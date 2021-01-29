@@ -15,10 +15,17 @@ namespace IT_Control_Tower.Controllers
         private ITControlTowerEntities db = new ITControlTowerEntities();
 
         // GET: NewHires
-        public ActionResult Index()
+        public ActionResult Index(String searchText)
         {
-            var newHires = db.NewHires.Include(n => n.TechPartner);
-            return View(newHires.ToList());
+            if (searchText == null|| searchText == "" )
+            {
+                var newHires = db.NewHires.Include(n => n.TechPartner);
+                return View(newHires.ToList());
+            }
+            else {
+                var newHires = db.NewHires.Where(n => n.SESA.Equals(searchText));
+                return View(newHires.ToList());
+            }
         }
 
         // GET: NewHires/Details/5

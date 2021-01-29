@@ -3,9 +3,12 @@
 @{
     ViewBag.Title = "Index";
 }
-
+@using (Html.BeginForm("Index", "NewHires", FormMethod.Get))
+{
 <h2>Index</h2>
-
+<b>Search:</b>
+@Html.TextBox("searchText")<input type="submit" value="Search" />
+}
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
