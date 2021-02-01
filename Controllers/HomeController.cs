@@ -26,11 +26,5 @@ namespace IT_Control_Tower.Controllers
 
             return View();
         }
-        public ActionResult multiPcDashboard()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
     }
 }

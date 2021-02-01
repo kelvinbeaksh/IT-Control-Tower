@@ -132,6 +132,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HAMController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NewHiresController.cs" />
     <Compile Include="failed_jobs.cs">
@@ -236,11 +237,17 @@
     <Content Include="Views\NewHires\Index.cshtml" />
     <Content Include="Views\Shared\navBar.cshtml" />
     <Content Include="Views\Shared\breadCrumb.cshtml" />
-    <Content Include="Views\Home\multiPcDashboard.cshtml" />
+    <Content Include="Views\HAM\multiPcDashboard.cshtml" />
+    <Content Include="Views\HAM\newHireDashboard.cshtml" />
+    <Content Include="Views\HAM\pcRefreshDashboard.cshtml" />
+    <Content Include="Views\HAM\bmcAccuracyDashboard.cshtml" />
+    <Content Include="Views\HAM\index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\Compliance\" />
+    <Folder Include="Views\SAM\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
