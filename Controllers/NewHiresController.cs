@@ -16,31 +16,19 @@ namespace IT_Control_Tower.Controllers
         private ITControlTowerEntities db = new ITControlTowerEntities();
 
         // GET: NewHires
-        public ActionResult Index(string sortOrder)
+        public ActionResult Index(string searchText)
         {
-            ViewBag.SESASortParm = String.IsNullOrEmpty(sortOrder) ? "SESA" : "";
-            ViewBag.SDateSortParm = sortOrder == "date" ? "date_desc" : "date";
             var newHires = db.NewHires.Include(n => n.TechPartner);
-            switch (sortOrder)
+            //.Include(n => n.TechPartner);
+            //Search
+            if (!String.IsNullOrEmpty(searchText))
             {
-                case "SESA":
-                    newHires = newHires.OrderByDescending(s => s.SESA);
-                    break;
-                case "date_desc":
-                    newHires = newHires.OrderByDescending(s => s.StartDate);
-                    break;
-                case "date":
-                    newHires = newHires.OrderBy(s => s.StartDate);
-                    break;
-                default:
-
-                    break;
-
+                newHires = newHires.Where(n => n.SESA.Equals(searchText));
             }
-                    return View(newHires.ToList());
+
+            return View(newHires.ToList());
             
             
-                //var newHires = db.NewHires.Where(n => n.SESA.Equals(searchText));
                
             
         }
