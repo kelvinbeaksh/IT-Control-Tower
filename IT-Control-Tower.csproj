@@ -227,8 +227,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\NewHires\Create.cshtml" />
     <Content Include="Views\NewHires\Delete.cshtml" />
@@ -236,18 +234,17 @@
     <Content Include="Views\NewHires\Edit.cshtml" />
     <Content Include="Views\NewHires\Index.cshtml" />
     <Content Include="Views\Shared\navBar.cshtml" />
-    <Content Include="Views\Shared\breadCrumb.cshtml" />
     <Content Include="Views\HAM\multiPcDashboard.cshtml" />
     <Content Include="Views\HAM\newHireDashboard.cshtml" />
     <Content Include="Views\HAM\pcRefreshDashboard.cshtml" />
     <Content Include="Views\HAM\bmcAccuracyDashboard.cshtml" />
     <Content Include="Views\HAM\index.cshtml" />
     <Content Include="Views\Compliance\index.cshtml" />
+    <Content Include="Views\SAM\index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\SAM\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
