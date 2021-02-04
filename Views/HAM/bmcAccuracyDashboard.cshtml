@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "bmcAccuracyDashboard";
+}
+
+<div>
+    <ol class="breadcrumb">
+        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+        <li>@Html.ActionLink("HAM", "Index", "HAM")</li>
+        <li>@Html.ActionLink("BMC Accuracy", "bmcAccuracyDashboard", "HAM")</li>
+    </ol>
+</div>
+<div>
+    <iframe src="https://tableau.schneider-electric.com/views/APACCMDBAccuracy/CMDBAccuracy?:showAppBanner=false&:display_count=n&:showVizHome=n&:origin=viz_share_link?:embed=yes"
+            width="100%"
+            height="1100"></iframe>
+</div>
+
