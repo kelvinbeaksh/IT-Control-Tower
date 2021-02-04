@@ -10,39 +10,40 @@
 }
 @using (Html.BeginForm("Index", "NewHires", FormMethod.Get))
 {
-    <h2>New Hire Management</h2>
+    <h2 style="color:#009e4d;">New Hire Management</h2>
     <b>Search:</b>
     @Html.TextBox("searchText")
     <input type="submit" value="Search" />
 }
 <p>
-   </br> 
-    <input type="button" class="btn btn-info" value="Create New Hire" onclick="location.href='@Url.Action("Create")'" />
+    </br>
+    <input type="button" class="btn btn-info" value="Create New Hire" onclick="location.href='@Url.Action("Create")'" style="background-color:#009e4d;" />
 </p>
 <div>
 
     @Html.Grid(Model).Columns(columns =>
 {
-    columns.Add(col => col.SESA, false);
-    columns.Add(col => col.StartDate, false);
-    columns.Add(col => col.Assignee, false);
-    columns.Add(col => col.Email, false);
-    columns.Add(col => col.Box, false);
-    columns.Add(col => col.Computer, false);
-    columns.Add(col => col.Headset, false);
-    columns.Add(col => col.Printer, false);
-    columns.Add().SetWidth(20)
+    columns.Add(col => col.SESA, false).Titled("SESA");
+    columns.Add(col => col.StartDate, false).Titled("Start Date");
+    columns.Add(col => col.Assignee, false).Titled("Assignee");
+    columns.Add(col => col.Email, false).Titled("Email");
+    columns.Add(col => col.Box, false).Titled("Box");
+    columns.Add(col => col.Computer, false).Titled("Computer");
+    columns.Add(col => col.Headset, false).Titled("Headset");
+    columns.Add(col => col.Printer, false).Titled("Printer");
+    columns.Add(col => col.Statuses, false).Titled("Status");
+    columns.Add().SetWidth(10).Titled("Edit")
     .Encoded(false)
     .Sanitized(false).RenderValueAs(col => @Html.ActionLink("Edit", "Edit", new { id = col.SESA }));
-    columns.Add().SetWidth(20)
+    columns.Add().SetWidth(10).Titled("Details")
     .Encoded(false)
     .Sanitized(false).RenderValueAs(col => @Html.ActionLink("Details", "Details", new { id = col.SESA }));
-    columns.Add().SetWidth(20)
+    columns.Add().SetWidth(10).Titled("Delete")
     .Encoded(false)
     .Sanitized(false).RenderValueAs(col => @Html.ActionLink("Delete", "Delete", new { id = col.SESA }));
-    
 
-}).Sortable().Filterable().WithPaging(3)
+
+}).Sortable().Filterable().WithPaging(10).Selectable(false)
 
 </div>
 @section Scripts {
@@ -50,4 +51,18 @@
     <script src="@Url.Content("~/Scripts/gridmvc.min.js")" type="text/javascript"></script>
 
 }
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $('#grid-row tr').each(function (index) {
+
+            if ($(this).children('td:nth-child(1)').text() == "Done") {
+                $(this).children('td:nth-child(3)').css("font-size", "999px");
+            } else {
+                $(this).children('td:nth-child(3)').css("font-size", "999px");
+            }
+
+        });
+    });
+</script>
 
