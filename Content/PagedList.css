@@ -7,6 +7,7 @@
 
 .pagination > li {
   display: inline;
+
 }
 
 .pagination > li > a,
@@ -41,6 +42,7 @@
   background-color: #eeeeee;
 }
 
+
 .pagination > .active > a,
 .pagination > .active > span,
 .pagination > .active > a:hover,
@@ -53,6 +55,7 @@
   background-color: #428bca;
   border-color: #428bca;
 }
+
 
 .pagination > .disabled > span,
 .pagination > .disabled > a,
