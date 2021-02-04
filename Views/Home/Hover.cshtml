@@ -1,0 +1,162 @@
+﻿
+@{
+    ViewBag.Title = "Hover";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="team-grid">
+    <div class="container">
+        <div class="intro">
+            <h2 class="text-center">Hover Function</h2>
+            <p class="text-center">A view page to test if hover works</p>
+        </div>
+        <div class="row people d-flex justify-content-center">
+            <div class="col-md-6 col-lg-4 item">
+                <div class="box" style="        background-image: url(https://i.pinimg.com/originals/0e/62/30/0e623039322a91cde32cc8dd4008d1ba.jpg?epik=dj0yJnU9UHRBczFpTldwXzI5eFBVQi1JY2dIb3FpbkYxX1A0c0kmcD0wJm49eUJxaTN5QndKVjROZWlILTd4T05pZyZ0PUFBQUFBR0FZNVZV)">
+                    <p>hello</p>
+                    <div class="cover">
+                        <h3 class="name">Tim Cook</h3>
+                        <p class="title">Android Developer</p>
+                        <div class="social"><a href="https://www.w3schools.com/icons/"><i class="fa fa-facebook-official"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 item">
+                <div class="box" style="        background-image: url(https://pbs.twimg.com/media/EZvx1WOXkAEMuis?format=jpg&name=large)">
+                    <p>nice to</p>
+                    <div class="cover">
+                        <h3 class="name">Michael Clarke</h3>
+                        <p class="title">Cricker</p>
+                        <div class="social"><a href="#"><i class="fa fa-facebook-official"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 item">
+                <div class="box" style="        background-image: url(https://www.ideasdonuts.com/wp-content/uploads/2020/04/2020-04-17-154814-603x1024.jpg)">
+                    <p>meet you</p>
+                    <div class="cover">
+                        <h3 class="name">Carlos vento</h3>
+                        <p class="title">Business Analyst</p>
+                        <div class="social"><a href="#"><i class="fa fa-facebook-official"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
+                        <div class="social">
+                            <button class="socialbt">click</button>
+                            <a href="#"><button>me</button></a>
+                            <a href="#"><button>again</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+     body {
+     background-color: lightgray;
+     background-repeat: no-repeat;
+     color: #000;
+     overflow-x: hidden
+     }
+
+     p {
+         color: #fff
+     }
+
+     h2 {
+         font-weight: bold;
+         margin-bottom: 40px;
+         padding-top: 40px;
+         color: #fff
+     }
+
+     @@media (max-width:767px) {
+         h2 {
+             margin-bottom: 25px;
+             padding-top: 25px;
+             font-size: 24px
+         }
+     }
+
+     .intro {
+         font-size: 16px;
+         max-width: 500px;
+         margin: 0 auto
+     }
+
+     .intro p {
+         margin-bottom: 0
+     }
+
+     .people {
+         padding: 50px 0;
+         cursor: pointer
+     }
+
+     .item {
+         margin-bottom: 30px
+     }
+
+     .item .box {
+         text-align: center;
+         background-repeat: no-repeat;
+         background-size: cover;
+         background-position: center;
+         height: 280px;
+         position: relative;
+         overflow: hidden
+     }
+
+     .item .cover {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background-color: rgba(31, 148, 255, 0.75);
+         transition: opacity 0.15s ease-in;
+         opacity: 0;
+         padding-top: 80px;
+         color: #fff;
+         text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15)
+     }
+
+     .item:hover .cover {
+         opacity: 1;
+         background-color:green;
+     }
+
+     .item .name {
+         font-weight: bold;
+         margin-bottom: 8px
+     }
+
+     .item .title {
+         text-transform: uppercase;
+         font-weight: bold;
+         color: #bbd8fb;
+         letter-spacing: 2px;
+         font-size: 13px;
+         margin-bottom: 20px
+     }
+
+     .social {
+         font-size: 18px
+     }
+
+     .social a {
+         color: inherit;
+         margin: 0 10px;
+         display: inline-block;
+         opacity: 0.7
+     }
+
+     .social a:hover {
+         opacity: 1
+     }
+
+     .socialbt{
+         background-color:gray;
+         color: green;
+         border-color:gray;
+     }
+</style>

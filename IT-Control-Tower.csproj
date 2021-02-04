@@ -132,6 +132,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\DataController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NewHiresController.cs" />
     <Compile Include="failed_jobs.cs">
@@ -158,6 +159,9 @@
     <Compile Include="migration.cs">
       <DependentUpon>ITCT-Data-Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\HAMModel.cs" />
+    <Compile Include="Models\HSCModel.cs" />
+    <Compile Include="Models\OverallModel.cs" />
     <Compile Include="NewHire.cs">
       <DependentUpon>ITCT-Data-Model.tt</DependentUpon>
     </Compile>
@@ -195,6 +199,7 @@
       <DependentUpon>ITCT-Data-Model.edmx</DependentUpon>
       <LastGenOutput>ITCT-Data-Model.cs</LastGenOutput>
     </Content>
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <EntityDeploy Include="ITCT-Data-Model.edmx">
@@ -204,6 +209,8 @@
     <Content Include="ITCT-Data-Model.edmx.diagram">
       <DependentUpon>ITCT-Data-Model.edmx</DependentUpon>
     </Content>
+    <Content Include="Scripts\data.json" />
+    <Content Include="Content\font-awesome.min.css" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -237,10 +244,14 @@
     <Content Include="Views\Shared\navBar.cshtml" />
     <Content Include="Views\Shared\breadCrumb.cshtml" />
     <Content Include="Views\Home\multiPcDashboard.cshtml" />
+    <Content Include="Views\Data\Index.cshtml" />
+    <Content Include="Views\Shared\card.cshtml" />
+    <Content Include="Views\Data\HSCView.cshtml" />
+    <Content Include="Views\Home\Hover.cshtml" />
+    <Content Include="Views\Data\HAMView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using System.Web.Mvc;
+using System.Web.Mvc;                                            
 
 namespace IT_Control_Tower.Controllers
 {
@@ -29,6 +29,12 @@ namespace IT_Control_Tower.Controllers
         public ActionResult multiPcDashboard()
         {
             ViewBag.Message = "Your contact page.";
+
+            return View();
+        }
+        public ActionResult Hover()
+        {
+            ViewBag.Message = "Hover page";
 
             return View();
         }
