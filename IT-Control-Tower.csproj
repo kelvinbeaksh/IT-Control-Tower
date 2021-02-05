@@ -135,6 +135,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HAMController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NewHiresController.cs" />
     <Compile Include="failed_jobs.cs">
@@ -234,8 +235,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\NewHires\Create.cshtml" />
     <Content Include="Views\NewHires\Delete.cshtml" />
@@ -243,6 +242,13 @@
     <Content Include="Views\NewHires\Edit.cshtml" />
     <Content Include="Views\NewHires\Index.cshtml" />
     <Content Include="Views\Shared\navBar.cshtml" />
+    <Content Include="Views\HAM\multiPcDashboard.cshtml" />
+    <Content Include="Views\HAM\newHireDashboard.cshtml" />
+    <Content Include="Views\HAM\pcRefreshDashboard.cshtml" />
+    <Content Include="Views\HAM\bmcAccuracyDashboard.cshtml" />
+    <Content Include="Views\HAM\index.cshtml" />
+    <Content Include="Views\Compliance\index.cshtml" />
+    <Content Include="Views\SAM\index.cshtml" />
     <Content Include="Views\Shared\breadCrumb.cshtml" />
     <Content Include="Views\Home\multiPcDashboard.cshtml" />
     <Content Include="Views\Shared\_GridPager.cshtml" />
