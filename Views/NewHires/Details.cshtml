@@ -4,76 +4,68 @@
     ViewBag.Title = "Details";
 }
 <div>
-    <ol class="breadcrumb" style="position:fixed;width:100%;z-index:999;">
-        <li>@Html.ActionLink("Home", "Index", "Home")</li>
-        <li>@Html.ActionLink("HAM", "Index", "HAM")</li>
-        <li>@Html.ActionLink("New Hires", "Index", "NewHires")</li>
-    </ol>
-</div>
-<div class="container" style="margin-top:4rem;">
-    <h2>Details</h2>
 
-    <div>
-        <h4>NewHire</h4>
-        <hr />
-        <dl class="dl-horizontal">
-            <dt>
-                @Html.DisplayNameFor(model => model.StartDate)
-            </dt>
+    <h4>NewHire</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.StartDate)
+        </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.StartDate)
-            </dd>
+        <dd>
+            @Html.DisplayFor(model => model.StartDate)
+        </dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.Email)
-            </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.Email)
-            </dd>
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.Box)
-            </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.Box)
+        </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.Box)
-            </dd>
+        <dd>
+            @Html.DisplayFor(model => model.Box)
+        </dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.Computer)
-            </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.Computer)
+        </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.Computer)
-            </dd>
+        <dd>
+            @Html.DisplayFor(model => model.Computer)
+        </dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.Headset)
-            </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.Headset)
+        </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.Headset)
-            </dd>
+        <dd>
+            @Html.DisplayFor(model => model.Headset)
+        </dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.Printer)
-            </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.Printer)
+        </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.Printer)
-            </dd>
+        <dd>
+            @Html.DisplayFor(model => model.Printer)
+        </dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.Statuses)
-            </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.Statuses)
+        </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.Statuses)
-            </dd>
+        <dd>
+            @Html.DisplayFor(model => model.Statuses)
+        </dd>
 
-            <dt>
+            @*<dt>
+
                 @Html.DisplayNameFor(model => model.TechPartner.Email)
             </dt>
 
@@ -82,9 +74,10 @@
             </dd>
 
         </dl>
-    </div>
+    </div>*@
+        <br />
     <p>
-        @Html.ActionLink("Edit", "Edit", new { id = Model.SESA }) |
-        @Html.ActionLink("Back to List", "Index")
+        <input type="button" class="btn btn-info" value="Edit" onclick="location.href='@Url.Action("Edit",new { id = Model.SESA })'" style="background-color:#009e4d;" />
+        <input type="button" class="btn btn-info" value="Back to List" onclick="location.href='@Url.Action("Index")'" style="background-color:#009e4d;" />
     </p>
 </div>
