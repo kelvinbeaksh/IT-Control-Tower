@@ -50,6 +50,10 @@ table.grid-table .grid-popup-additional { padding: 3px 0 0 0; }
     color: #009e4d !important;
 }
 
+//Filter Icon CSS
+ .grid-filter-btn {
+    background-color: red !important;
+}
 
 /* POP-UP */
 .grid-dropdown {

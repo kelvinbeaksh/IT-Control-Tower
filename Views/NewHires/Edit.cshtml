@@ -88,13 +88,13 @@
         <div class="col-md-offset-2 col-md-10">
             <input type="submit" value="Save" class="btn btn-default" />
         </div>
+    <div>
+        <input type="button" class="btn btn-info" value="Back to List" onclick="location.href='@Url.Action("Index")'" style="background-color:#009e4d;" />
+
     </div>
 </div>
+    </div>
 }
-
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")

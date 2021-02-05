@@ -66,17 +66,20 @@
             @Html.DisplayFor(model => model.Statuses)
         </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.TechPartner.Email)
-        </dt>
+            @*<dt>
+                @Html.DisplayNameFor(model => model.TechPartner.Email)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.TechPartner.Email)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.TechPartner.Email)
+            </dd>
 
-    </dl>
+        </dl>
+    </div>*@
+        <br />
+    <p>
+        <input type="button" class="btn btn-info" value="Edit" onclick="location.href='@Url.Action("Edit",new { id = Model.SESA })'" style="background-color:#009e4d;" />
+        <input type="button" class="btn btn-info" value="Back to List" onclick="location.href='@Url.Action("Index")'" style="background-color:#009e4d;" />
+
+    </p>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.SESA }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
