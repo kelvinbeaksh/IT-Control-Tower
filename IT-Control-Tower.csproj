@@ -135,9 +135,11 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ComplianceController.cs" />
     <Compile Include="Controllers\HAMController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NewHiresController.cs" />
+    <Compile Include="Controllers\SAMController.cs" />
     <Compile Include="failed_jobs.cs">
       <DependentUpon>ITCT-Data-Model.tt</DependentUpon>
     </Compile>
@@ -185,6 +187,24 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Gridmvc.css" />
+    <Content Include="Content\images\adobe.png" />
+    <Content Include="Content\images\bmc.png" />
+    <Content Include="Content\images\compliance.png" />
+    <Content Include="Content\images\cylance.png" />
+    <Content Include="Content\images\gap.png" />
+    <Content Include="Content\images\ham.png" />
+    <Content Include="Content\images\health.png" />
+    <Content Include="Content\images\macfee.png" />
+    <Content Include="Content\images\mspatch.png" />
+    <Content Include="Content\images\multadd.png" />
+    <Content Include="Content\images\multpc.png" />
+    <Content Include="Content\images\newhire.png" />
+    <Content Include="Content\images\othercau.png" />
+    <Content Include="Content\images\refresh.png" />
+    <Content Include="Content\images\sam.png" />
+    <Content Include="Content\images\sccm.png" />
+    <Content Include="Content\images\space.png" />
+    <Content Include="Content\images\tracker.png" />
     <Content Include="Content\PagedList.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />

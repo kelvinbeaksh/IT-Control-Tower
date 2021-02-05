@@ -2,6 +2,230 @@
 @{
     ViewBag.Title = "View";
 }
+<div>
+    <ol class="breadcrumb">
+        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+        <li>@Html.ActionLink("SAM", "Index", "SAM")</li>
+    </ol>
+</div>
 
-<h2>View</h2>
+<div class="container">
+    <div class="row people d-flex justify-content-center">
+        <div class="col-md-6 col-lg-4 item">
+            <div class="box" style="background-color: green;height: 280px;">
+                <div style="padding: 7rem; ">
+                    <img src="~/Content/images/tracker.png" alt="trackerlogo" width="80" />
+                    <p style="text-align:center;">Software Asset Tracker</p>
+                </div>
+                @*<div class="cover">
+                    <div class="social">
+                        <div class="col col-no-gutters">
+                            <a class="outer" href="#" style="font-size: 1.25em; color: #009e4d;">New Hire Dashboard</a>
+                            <a class="outer" href="#" style="font-size: 1.25em; color: #009e4d;">Add & Edit Staff</a>
+                        </div>
+                    </div>
+                </div>*@
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-4 item">
+            <div class="box" style="background-color: green;height: 280px;">
+                <div style="padding: 8rem; margin:10px;">
+                    <div style="margin-bottom:30px;">
+                        <img src="~/Content/images/gap.png" alt="gaplogo" width="80" />
+                      </div>
+                        <p style="text-align:center;">Software Asset Gap</p>
+                    </div>
+                    <div class="cover">
+                        <div class="social">
+                            <div class="col col-no-gutters">
+                                <a class="outer" href="#" style="font-size: 1.25em; color: #009e4d;">Software Asset Dashboard</a>
+                                @*<a class="outer" href="#" style="font-size: 1.25em; color: #009e4d;">Appendix</a>*@
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div class="col-md-6 col-lg-4 item">
+            <div class="box" style="background-color: green;height: 280px;">
+                <div style="padding: 8rem; ">
+                    <img src="~/Content/images/adobe.png" alt="adobelogo" width="80" />
+                    <p style="text-align:center;">Adobe Cautionary</p>
+                </div>
+                @*<div class="cover">
+                    <div class="social">
+                        <div class="col col-no-gutters">
+                            <a class="outer" href="#" style="font-size: 1.25em; color: #009e4d;">CMDB Dashboard</a>
+                            <a class="outer" href="#" style="font-size: 1.25em; color: #009e4d;">Appendix</a>
+                        </div>
+                    </div>
+                </div>*@
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-4 item">
+            <div class="box" style="background-color: green;height: 280px;">
+                <div style="padding: 8rem;">
+                    <img src="~/Content/images/othercau.png" alt="otherlogo" width="80" />
+                    <p style="text-align:center;">Other Cautionary</p>
+                </div>
+                @*<div class="cover">
+                    <div class="social">
+                        <div class="col col-no-gutters">
+                            <a class="outer" href="#" style="font-size: 1.25em; color: #009e4d;">Multiple PC Dashboard</a>
+                            <a class="outer" href="#" style="font-size: 1.25em; color: #009e4d;">PC Details</a>
+                            <a class="outer" href="#" style="font-size: 1.25em; color: #009e4d;">Appendix</a>
+                        </div>
+                    </div>
+                </div>*@
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-4 item">
+            <div class="box" style="background-color: green;height: 280px;">
+                <div style="padding: 6rem; ">
+                    <img src="~/Content/images/multadd.png" alt="officeadditionlogo" width="80" />
+                    <p style="text-align:center;">Multiple Office Addition</p>
+                </div>
+                @*<div class="cover">
+                    <div class="social">
+                        <div class="col col-no-gutters">
+                            <a class="outer" href="#" style="font-size: 1.25em; color: #009e4d;">Multiple PC Dashboard</a>
+                            <a class="outer" href="#" style="font-size: 1.25em; color: #009e4d;">PC Details</a>
+                            <a class="outer" href="#" style="font-size: 1.25em; color: #009e4d;">Appendix</a>
+                        </div>
+                    </div>
+                </div>*@
+            </div>
+        </div>
+    </div>
+</div>
 
+<style>
+    body {
+        background-color: white;
+        background-repeat: no-repeat;
+        color: #000;
+        overflow-x: hidden
+    }
+
+    p {
+        color: #fff;
+        font-size: 24px;
+    }
+
+    h2 {
+        font-weight: bold;
+        margin-bottom: 40px;
+        padding-top: 40px;
+        color: black;
+    }
+
+    @@media (max-width:767px) {
+        h2 {
+            margin-bottom: 25px;
+            padding-top: 25px;
+            font-size: 24px
+        }
+    }
+
+    .intro {
+        font-size: 16px;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+        .intro p {
+            margin-bottom: 0;
+            color: black;
+        }
+
+    .people {
+        padding: 50px 0;
+        cursor: pointer
+    }
+
+    .item {
+        margin-bottom: 30px
+    }
+
+        .item .box {
+            text-align: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            height: 280px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 1rem;
+            border-color: transparent;
+        }
+
+        .item .cover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: green;
+            transition: opacity 0.3s ease-in-out;
+            opacity: 0;
+            /*color: #fff;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);*/
+            padding: 0.7rem 0rem;
+            font-size: 24px;
+        }
+
+        .item:hover .cover {
+            opacity: 1;
+            background-color: green;
+        }
+
+        .item .name {
+            font-weight: bold;
+            margin-bottom: 8px
+        }
+
+        .item .title {
+            text-transform: uppercase;
+            font-weight: bold;
+            color: #bbd8fb;
+            letter-spacing: 2px;
+            font-size: 13px;
+            margin-bottom: 20px
+        }
+
+    .social {
+        font-size: 18px
+    }
+
+        .social a {
+            color: inherit;
+            /*margin: 0 10px;*/
+            display: inline-block;
+            opacity: 0.8;
+        }
+
+            .social a:hover {
+                opacity: 1
+            }
+
+    .inner {
+        background-color: lightgrey;
+        color: green;
+        margin-top: 3.5rem;
+        margin-bottom: 0rem;
+        text-align: center;
+        width: 100%;
+        padding: 2.8rem;
+    }
+
+    .outer {
+        background-color: lightgrey;
+        color: green;
+        /*margin-right: 2rem;*/
+        /*margin:0.5rem;*/
+        margin-top: 0.8rem;
+        margin-bottom: 0.8rem;
+        text-align: center;
+        width: 100%;
+        padding: 2rem;
+    }
+</style>
