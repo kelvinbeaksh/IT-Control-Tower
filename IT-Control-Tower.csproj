@@ -263,7 +263,6 @@
     <Content Include="Views\NewHires\Index.cshtml" />
     <Content Include="Views\Shared\navBar.cshtml" />
     <Content Include="Views\HAM\multiPcDashboard.cshtml" />
-    <Content Include="Views\HAM\newHireDashboard.cshtml" />
     <Content Include="Views\HAM\pcRefreshDashboard.cshtml" />
     <Content Include="Views\HAM\bmcAccuracyDashboard.cshtml" />
     <Content Include="Views\HAM\index.cshtml" />
