@@ -12,22 +12,11 @@
 <div class="container">
     <div class="row people d-flex justify-content-center">
         <div class="col-md-6 col-lg-4 item">
-            <div class="box" style="background-color: green;height: 280px;">
+            <div class="box" style="background-color: green;height: 280px;" type="button" onclick="location.href='@Url.Action("Index","NewHires")'">
                 <div style="padding: 8rem; ">
                     <img src="~/Content/images/newhire.png" alt="newhirelogo" width="80" />
                     <p style="text-align:center;">New Hire</p>
-                </div>  
-                <div class="cover">
-                    <div class="social">
-                        <div class="col col-no-gutters">
-                            <div class="outer" style="font-size: 1.25em; color: #009e4d;" type="button" onclick="location.href='@Url.Action("index","NewHires")'">
-                                New Hire Dashboard
-                            </div>
-                            <div class="outer" style="font-size: 1.25em; color: #009e4d;" type="button" onclick="location.href='@Url.Action("newHireDashboard","HAM")'">
-                                Add & Edit Staff
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </div>
