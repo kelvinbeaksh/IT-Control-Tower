@@ -29,7 +29,7 @@
     </p>
     <div>
 
-        @Html.Grid(Model).Columns(columns =>
+        @Html.Grid(Model).Named("NH").Columns(columns =>
     {
         columns.Add(col => col.SESA, false).Titled("SESA");
         columns.Add(col => col.StartDate, false).Titled("Start Date");
@@ -57,21 +57,66 @@
     @section Scripts {
 
         <script src="@Url.Content("~/Scripts/gridmvc.min.js")" type="text/javascript"></script>
+        <script type="text/javascript">
+            $('tr').each(function (index) { //iterate over all table rows
+                if (index > 0) {     //skip header
+                    var today = new Date();
+                    //console.log(d.getMonth() + 1);
+                    //slice to date format    
+                    var slice = $(this).children('td:nth-child(2)').text().substring(0, $(this).children('td:nth-child(2)').text().length - 3)
+                    //Change / to -, before converting to date obj
+                    var date = new Date(slice.replace(/\//g, '-'));
+                    //Change from millis to days
+                    var days = Math.ceil(Math.floor((today - date) / 3600) / 24000);
+                    console.log(days);
+                    //Days more than 5 
+                    if (days > 5) {
+                        $(this).children('td:nth-child(2)').css("background-color", "#90EE90");
+                    }
+                    //Overdue
+                    else if (days < 0) {
+                        $(this).children('td:nth-child(2)').css("background-color", "#DCDCDC");
+                    }
+                    //T-5 to T-0
+                    switch (days) {
+
+                        case 5:
+                            $(this).children('td:nth-child(2)').css("background-color", "#32CD32");
+                            break;
+                        case 4:
+                            $(this).children('td:nth-child(2)').css("background-color", "#FFFF99");
+                            break;
+                        case 3:
+                            $(this).children('td:nth-child(2)').css("background-color", "#FFFF00");
+                            break;
+                        case 2:
+                            $(this).children('td:nth-child(2)').css("background-color", "#FFd589");
+                            break;
+                        case 1:
+                            $(this).children('td:nth-child(2)').css("background-color", "#FFB327");
+                            break;
+                        case 0:
+                            $(this).children('td:nth-child(2)').css("background-color", "#FF0000");
+                            break;
+                        
+                    }
+
+
+
+                    //if ($(this).children('td:nth-child(2)').text().substring(0, 1) == Date.now)  //look for the 3rd td in each row. thats where your age is.
+                    //{
+                    //    $(this).children('td:nth-child(2)').css("background-color", "green");
+                    //}
+                    //else {
+                    //    $(this).children('td:nth-child(2)').css("background-color", "red");
+                    //}
+                
+                    }
+            });
+        </script>
 
     }
-    <script type="text/javascript">
-        $(document).ready(function () {
 
-            $('#grid-row tr').each(function (index) {
 
-                if ($(this).children('td:nth-child(1)').text() == "Done") {
-                    $(this).children('td:nth-child(3)').css("font-size", "999px");
-                } else {
-                    $(this).children('td:nth-child(3)').css("font-size", "999px");
-                }
-
-            });
-        });
-    </script>
 </div>
 
