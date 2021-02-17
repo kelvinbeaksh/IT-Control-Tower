@@ -27,7 +27,7 @@
         </br>
         <input type="button" class="btn btn-info" value="Create New Hire" onclick="location.href='@Url.Action("Create")'" style="background-color:#009e4d;" />
     </p>
-    @*T - 0 Table*@
+    <h1>T - 0 Table</h1>
     <div id="NHT0">
 
         @Html.Grid(Model.Where(c => c.StartDate.Subtract(DateTime.Today).TotalDays <= 0)).Named("NHT0").Columns(columns =>
@@ -52,10 +52,10 @@
         .Sanitized(false).RenderValueAs(col => @Html.ActionLink("Delete", "Delete", new { id = col.SESA }));
 
 
-    }).Sortable().Filterable().WithPaging(10).Selectable(false)
+    }).Sortable().Filterable().WithPaging(50).Selectable(false)
 
     </div>
-    @*T - 3 Table*@
+    <h1>T - 3 Table</h1>
     <div id="NHT3">
 
         @Html.Grid(Model.Where(c => c.StartDate.Subtract(DateTime.Today).TotalDays.Equals(3))).Named("NHT3").Columns(columns =>
@@ -83,7 +83,7 @@
     }).Sortable().Filterable().WithPaging(10).Selectable(false)
 
     </div>
-    @*T - 5 Table*@
+    <h1>T - 5 Table</h1>
     <div id="NHT5">
 
         @Html.Grid(Model.Where(c => c.StartDate.Subtract(DateTime.Today).TotalDays > 5)).Named("NHT5").Columns(columns =>
