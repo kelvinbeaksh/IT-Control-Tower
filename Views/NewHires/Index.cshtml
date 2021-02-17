@@ -28,9 +28,9 @@
         <input type="button" class="btn btn-info" value="Create New Hire" onclick="location.href='@Url.Action("Create")'" style="background-color:#009e4d;" />
     </p>
     @*T - 0 Table*@
-    <div>
+    <div id="NHT0">
 
-        @Html.Grid(Model.Where(c => c.StartDate.Subtract(DateTime.Today).TotalDays.Equals(0))).Named("NHT0").Columns(columns =>
+        @Html.Grid(Model.Where(c => c.StartDate.Subtract(DateTime.Today).TotalDays <= 0)).Named("NHT0").Columns(columns =>
     {
         columns.Add(col => col.SESA, false).Titled("SESA");
         columns.Add(col => col.StartDate, false).Titled("Start Date");
@@ -56,7 +56,7 @@
 
     </div>
     @*T - 3 Table*@
-    <div>
+    <div id="NHT3">
 
         @Html.Grid(Model.Where(c => c.StartDate.Subtract(DateTime.Today).TotalDays.Equals(3))).Named("NHT3").Columns(columns =>
     {
@@ -84,9 +84,9 @@
 
     </div>
     @*T - 5 Table*@
-    <div>
+    <div id="NHT5">
 
-        @Html.Grid(Model.Where(c => c.StartDate.Subtract(DateTime.Today).TotalDays.Equals(5))).Named("NHT5").Columns(columns =>
+        @Html.Grid(Model.Where(c => c.StartDate.Subtract(DateTime.Today).TotalDays > 5)).Named("NHT5").Columns(columns =>
     {
         columns.Add(col => col.SESA, false).Titled("SESA");
         columns.Add(col => col.StartDate, false).Titled("Start Date");
@@ -124,32 +124,32 @@
                     //Change / to -, before converting to date obj
                     var date = new Date(slice.replace(/\//g, '-'));
                     //Change from millis to days
-                    var days = Math.ceil(Math.floor((today - date) / 3600) / 24000);
-                    console.log(date);
+                    var days = Math.floor((today - date) / (1000 * 60 * 60 * 24));
+                    console.log(days);
                     //Days more than 5
-                    if (days > 5) {
+                    if (days < -5) {
                         $(this).children('td:nth-child(2)').css("background-color", "#90EE90");
                     }
                     //Overdue
-                    else if (days < 0) {
+                    else if (days > 0) {
                         $(this).children('td:nth-child(2)').css("background-color", "#DCDCDC");
                     }
                     //T-5 to T-0
                     switch (days) {
 
-                        case 5:
+                        case -5:
                             $(this).children('td:nth-child(2)').css("background-color", "#32CD32");
                             break;
-                        case 4:
+                        case -4:
                             $(this).children('td:nth-child(2)').css("background-color", "#FFFF99");
                             break;
-                        case 3:
+                        case -3:
                             $(this).children('td:nth-child(2)').css("background-color", "#FFFF00");
                             break;
-                        case 2:
+                        case -2:
                             $(this).children('td:nth-child(2)').css("background-color", "#FFd589");
                             break;
-                        case 1:
+                        case -1:
                             $(this).children('td:nth-child(2)').css("background-color", "#FFB327");
                             break;
                         case 0:
