@@ -194,6 +194,7 @@
     <Content Include="Content\images\gap.png" />
     <Content Include="Content\images\ham.png" />
     <Content Include="Content\images\health.png" />
+    <Content Include="Content\images\arrow.png" />
     <Content Include="Content\images\macfee.png" />
     <Content Include="Content\images\mspatch.png" />
     <Content Include="Content\images\multadd.png" />

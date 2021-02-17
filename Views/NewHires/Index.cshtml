@@ -27,7 +27,12 @@
         </br>
         <input type="button" class="btn btn-info" value="Create New Hire" onclick="location.href='@Url.Action("Create")'" style="background-color:#009e4d;" />
     </p>
-    <h1>T - 0 Table</h1>
+    <button1 class="btn btn-block" style="background-color:#009e4d; color:white; text-align:left; display:flex; ">
+        T-0
+         <img src="~/Content/images/arrow.png" id="arrow1" style="margin-right: 10px; margin-left:auto;"/>
+    </button1>
+
+    @*T - 0 Table*@
     <div id="NHT0">
 
         @Html.Grid(Model.Where(c => c.StartDate.Subtract(DateTime.Today).TotalDays <= 0)).Named("NHT0").Columns(columns =>
@@ -55,7 +60,12 @@
     }).Sortable().Filterable().WithPaging(50).Selectable(false)
 
     </div>
-    <h1>T - 3 Table</h1>
+    <p></p>
+    <button2 class="btn btn-block" style="background-color:#009e4d; color:white; text-align:left; display:flex;">
+        T-3
+        <img src="~/Content/images/arrow.png" id="arrow2" style="margin-right: 10px; margin-left:auto;"/>
+    </button2>
+    @*T - 3 Table*@
     <div id="NHT3">
 
         @Html.Grid(Model.Where(c => c.StartDate.Subtract(DateTime.Today).TotalDays.Equals(3))).Named("NHT3").Columns(columns =>
@@ -83,7 +93,13 @@
     }).Sortable().Filterable().WithPaging(10).Selectable(false)
 
     </div>
-    <h1>T - 5 Table</h1>
+    <p></p>
+    @*T - 5 Table*@
+    <button3 class="btn btn-block" style="background-color:#009e4d; color:white;text-align:left; display:flex;">
+        T-5
+        <img src="~/Content/images/arrow.png" id="arrow3" style="margin-right: 10px; margin-left:auto;"/>
+    </button3>
+
     <div id="NHT5">
 
         @Html.Grid(Model.Where(c => c.StartDate.Subtract(DateTime.Today).TotalDays > 5)).Named("NHT5").Columns(columns =>
@@ -170,7 +186,40 @@
 
                 }
             });
+            //show and hide functions
+            $('button1').click(function () {
+                const img = document.getElementById('arrow1')
+                if ($("#NHT0").is(':visible')) {
+                    $("#NHT0").hide()
+                    img.style.transform='rotate(90deg)'
+                } else {
+                    $("#NHT0").show()
+                    img.style.transform = 'rotate(360deg)'
+                    
+                }
+            })
+            $('button2').click(function () {
+                const img = document.getElementById('arrow2')
+                if ($('#NHT3').is(':visible')) {
+                    $('#NHT3').hide()
+                    img.style.transform = 'rotate(90deg)'
+                } else {
+                    $('#NHT3').show()
+                    img.style.transform = 'rotate(360deg)'
+                }
+            })
+            $('button3').click(function () {
+                const img = document.getElementById('arrow3')
+                if ($('#NHT5').is(':visible')) {
+                    $('#NHT5').hide()
+                    img.style.transform = 'rotate(90deg)'
+                } else {
+                    $('#NHT5').show()
+                    img.style.transform = 'rotate(360deg)'
+                }
+            })
         </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     }
 
