@@ -130,8 +130,11 @@
     @section Scripts {
 
         <script src="@Url.Content("~/Scripts/gridmvc.min.js")" type="text/javascript"></script>
+        
+        
+        @*Script to color table*@
         <script type="text/javascript">
-            $('tr').each(function (index) { //iterate over all table rows
+          @*  $('tr').each(function (index) { //iterate over all table rows
                 if (index > 0) {     //skip header
                     var today = new Date();
                     //console.log(d.getMonth() + 1);
@@ -185,7 +188,7 @@
                     //}
 
                 }
-            });
+            });*@
             //show and hide functions
             $('button1').click(function () {
                 const img = document.getElementById('arrow1')
