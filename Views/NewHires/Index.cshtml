@@ -38,7 +38,7 @@
         @Html.Grid(Model.Where(c => c.StartDate.Subtract(DateTime.Today).TotalDays <= 0)).Named("NHT0").Columns(columns =>
     {
         columns.Add(col => col.SESA, false).Titled("SESA");
-        columns.Add(col => col.StartDate, false).Titled("Start Date");
+        columns.Add(col => col.StartDate, false).Titled("Start Date").Format("{0: MM/dd/yyyy}");
         columns.Add(col => col.Assignee, false).Titled("Assignee");
         columns.Add(col => col.Email, false).Titled("Email");
         columns.Add(col => col.Box, false).Titled("Box");
@@ -71,7 +71,7 @@
         @Html.Grid(Model.Where(c => c.StartDate.Subtract(DateTime.Today).TotalDays.Equals(3))).Named("NHT3").Columns(columns =>
     {
         columns.Add(col => col.SESA, false).Titled("SESA");
-        columns.Add(col => col.StartDate, false).Titled("Start Date");
+        columns.Add(col => col.StartDate, false).Titled("Start Date").Format("{0: MM/dd/yyyy}");
         columns.Add(col => col.Assignee, false).Titled("Assignee");
         columns.Add(col => col.Email, false).Titled("Email");
         columns.Add(col => col.Box, false).Titled("Box");
@@ -105,7 +105,7 @@
         @Html.Grid(Model.Where(c => c.StartDate.Subtract(DateTime.Today).TotalDays > 5)).Named("NHT5").Columns(columns =>
     {
         columns.Add(col => col.SESA, false).Titled("SESA");
-        columns.Add(col => col.StartDate, false).Titled("Start Date");
+        columns.Add(col => col.StartDate, false).Titled("Start Date").Format("{0: MM/dd/yyyy}");
         columns.Add(col => col.Assignee, false).Titled("Assignee");
         columns.Add(col => col.Email, false).Titled("Email");
         columns.Add(col => col.Box, false).Titled("Box");
