@@ -96,6 +96,7 @@ namespace IT_Control_Tower.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "SESA,StartDate,Assignee,Email,Box,Computer,Headset,Printer,Statuses")] NewHire newHire)
         {
+           
             if (ModelState.IsValid)
             {
                 db.Entry(newHire).State = EntityState.Modified;

@@ -90,7 +90,7 @@
         .Sanitized(false).RenderValueAs(col => @Html.ActionLink("Delete", "Delete", new { id = col.SESA }));
 
 
-    }).Sortable().Filterable().WithPaging(10).Selectable(false)
+    }).Sortable().Filterable().WithPaging(5).Selectable(false)
 
     </div>
     <p></p>
@@ -124,7 +124,7 @@
         .Sanitized(false).RenderValueAs(col => @Html.ActionLink("Delete", "Delete", new { id = col.SESA }));
 
 
-    }).Sortable().Filterable().WithPaging(10).Selectable(false)
+    }).Sortable().Filterable().WithPaging(5).Selectable(false)
 
     </div>
     @section Scripts {
@@ -134,7 +134,9 @@
         
         @*Script to color table*@
         <script type="text/javascript">
-          @*  $('tr').each(function (index) { //iterate over all table rows
+            @*
+            $('tr').each(function (index) { //iterate over all table rows
+                
                 if (index > 0) {     //skip header
                     var today = new Date();
                     //console.log(d.getMonth() + 1);
@@ -144,7 +146,7 @@
                     var date = new Date(slice.replace(/\//g, '-'));
                     //Change from millis to days
                     var days = Math.floor((today - date) / (1000 * 60 * 60 * 24));
-                    console.log(days);
+                    console.log(date.Subtract(DateTime.Today).TotalDays);
                     //Days more than 5
                     if (days < -5) {
                         $(this).children('td:nth-child(2)').css("background-color", "#90EE90");
