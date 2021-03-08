@@ -23,6 +23,7 @@ namespace IT_Control_Tower
         public string Headset { get; set; }
         public string Printer { get; set; }
         public string Statuses { get; set; }
+        public int Lock { get; set; }
     
         public virtual TechPartner TechPartner { get; set; }
     }

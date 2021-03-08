@@ -25,12 +25,21 @@ namespace IT_Control_Tower.Controllers
             {
                 newHires = newHires.Where(n => n.SESA.Equals(searchText));
             }
+    
+            return View(newHires.ToList().OrderBy(x => x.StartDate)); 
+        }
+        
+        public ActionResult testview(string searchtext)
+        {
+            var newhires = db.NewHires.Include(n => n.TechPartner);
+            //.include(n => n.techpartner);
+            //search
+            if (!string.IsNullOrEmpty(searchtext))
+            {
+                newhires = newhires.Where(n => n.SESA.Equals(searchtext));
+            }
 
-            return View(newHires.ToList());
-            
-            
-               
-            
+            return PartialView("_t0table", newhires.ToList().OrderBy(x => x.StartDate));
         }
 
         // GET: NewHires/Details/5
@@ -60,7 +69,7 @@ namespace IT_Control_Tower.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "SESA,StartDate,Assignee,Email,Box,Computer,Headset,Printer,Statuses")] NewHire newHire)
+        public ActionResult Create([Bind(Include = "SESA,StartDate,Assignee,Email,Box,Computer,Headset,Printer,Statuses,Lock")] NewHire newHire)
         {
             if (ModelState.IsValid)
             {
@@ -89,10 +98,26 @@ namespace IT_Control_Tower.Controllers
             return View(newHire);
         }
 
-        // POST: NewHires/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
+        //Locking new hire
+        public ActionResult LockNH(string id)
+        {
+            NewHire newHire = db.NewHires.Find(id);
+            if (newHire.Lock == 1)
+            {
+                newHire.Lock = 0;
+            }
+            else {
+                newHire.Lock = 1;
+            }
+            db.Entry(newHire).State = EntityState.Modified;
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+            // POST: NewHires/Edit/5
+            // To protect from overposting attacks, enable the specific properties you want to bind to, for 
+            // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+            [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "SESA,StartDate,Assignee,Email,Box,Computer,Headset,Printer,Statuses")] NewHire newHire)
         {
