@@ -30,13 +30,13 @@
     </p>
     @*Ready Table*@
     <button0 class="btn btn-block" style="background-color:#009e4d; color:white; text-align:left; display:flex; ">
-        Ready (@Model.Where(c => c.Headset == "ready for collection" && c.Computer == "ready for collection" && c.Printer == "set up").Count())
+        Ready (@Model.Where(c => c.Statuses=="Pass").Count())
         <img src="~/Content/images/arrow.png" id="arrow0" style="margin-right: 10px; margin-left:auto;" />
     </button0>
     @*Ready Table*@
 <div id="NHReady">
 
-    @Html.Grid(Model.Where(c => c.Headset == "ready for collection" && c.Computer == "ready for collection" && c.Printer == "set up")).Named("NHReady").Columns(columns =>
+    @Html.Grid(Model.Where(c => c.Statuses == "Pass")).Named("NHReady").Columns(columns =>
 {
     columns.Add(col => col.SESA, false).Titled("SESA");
     columns.Add(col => col.StartDate, false).Titled("Start Date").Format("{0: dd/MM/yyyy}");
