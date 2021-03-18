@@ -22,7 +22,7 @@
         <h2 style="color:#009e4d;">New Hire Management</h2>
         <b>Search:</b>
         @Html.TextBox("searchText")
-        <input type="submit" value="Search" />
+        <input id="searchInput" type="submit" value="Search" onclick="document.getElementById('searchText').value=''"/>
     }
     <p>
         </br>
