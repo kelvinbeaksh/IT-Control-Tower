@@ -12,7 +12,7 @@
 <div class="container">
     <div class="row people d-flex justify-content-center">
         <div class="col-md-6 col-lg-4 item">
-            <div class="box" style="background-color: green;height: 280px;">
+            <div class="box" style="background-color: green;height: 280px;" onclick="location.href='@Url.Action("softwareAssetTrackerDashboard","SAM")'">
                 <div style="padding: 7rem; ">
                     <img src="~/Content/images/tracker.png" alt="trackerlogo" width="80" />
                     <p style="text-align:center;">Software Asset Tracker</p>
@@ -37,7 +37,7 @@
                     </div>
                     <div class="cover">
                         <div class="social">
-                            <div class="col col-no-gutters">
+                            <div class="col col-no-gutters" onclick="location.href='@Url.Action("softwareAssetGapDashboard","SAM")'">
                                 <a class="outer" href="#" style="font-size: 1.25em; color: #009e4d;">Software Asset Dashboard</a>
                                 @*<a class="outer" href="#" style="font-size: 1.25em; color: #009e4d;">Appendix</a>*@
                             </div>
@@ -46,7 +46,7 @@
                 </div>
         </div>
         <div class="col-md-6 col-lg-4 item">
-            <div class="box" style="background-color: green;height: 280px;">
+            <div class="box" style="background-color: green;height: 280px;" onclick="location.href='@Url.Action("","SAM")'">
                 <div style="padding: 8rem; ">
                     <img src="~/Content/images/adobe.png" alt="adobelogo" width="80" />
                     <p style="text-align:center;">Adobe Cautionary</p>
@@ -62,7 +62,7 @@
             </div>
         </div>
         <div class="col-md-6 col-lg-4 item">
-            <div class="box" style="background-color: green;height: 280px;">
+            <div class="box" style="background-color: green;height: 280px;" onclick="location.href='@Url.Action("otherCautionaryDashboard","SAM")'">
                 <div style="padding: 8rem;">
                     <img src="~/Content/images/othercau.png" alt="otherlogo" width="80" />
                     <p style="text-align:center;">Other Cautionary</p>
@@ -79,10 +79,10 @@
             </div>
         </div>
         <div class="col-md-6 col-lg-4 item">
-            <div class="box" style="background-color: green;height: 280px;">
+            <div class="box" style="background-color: green;height: 280px;" onclick="location.href='@Url.Action("multipleOfficeEditionDashboard","SAM")'">
                 <div style="padding: 6rem; ">
                     <img src="~/Content/images/multadd.png" alt="officeadditionlogo" width="80" />
-                    <p style="text-align:center;">Multiple Office Addition</p>
+                    <p style="text-align:center;">Multiple Office Edition</p>
                 </div>
                 @*<div class="cover">
                     <div class="social">

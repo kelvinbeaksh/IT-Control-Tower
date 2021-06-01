@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "softwareAssetTrackerDashboard";
+}
+
+<div>
+    <ol class="breadcrumb">
+        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+        <li>@Html.ActionLink("SAM", "Index", "SAM")</li>
+        <li>@Html.ActionLink("Software Asset Tracker", "softwareAssetTrackerDashboard", "SAM")</li>
+    </ol>
+</div>
+<div>
+    <iframe src="https://tableau.schneider-electric.com/views/APACCMDBAccuracy/CMDBAccuracy?:showAppBanner=false&:display_count=n&:showVizHome=n&:origin=viz_share_link?:embed=yes"
+            width="100%"
+            height="1100"></iframe>
+</div>
+
